@@ -1,36 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="32dp"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="مرحباً بك في تطبيق VPN"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="استمتع بتصفح آمن وسريع"
-        android:textSize="16sp"
-        android:textColor="#666666"
-        android:gravity="center"
-        android:layout_marginBottom="48dp" />
-
-    <Button
-        android:id="@+id/getStartedButton"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:text="ابدأ الآن"
-        android:textSize="18sp" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-</LinearLayout>
+        <!-- مسافة علوية -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <!-- العنوان الرئيسي -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مرحبًا بك في كونكتيلي VPN"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <!-- الوصف -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اتصال أسرع، أسهل، وبدون حدود 🌍"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginBottom="40dp" />
+
+        <!-- ========== زر 1: ما هو كونكتيلي VPN ========== -->
+        <LinearLayout
+            android:id="@+id/whatIsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/whatIsButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="ما هو كونكتيلي VPN ؟"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A237E"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/whatIsContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:padding="16dp"
+                android:text="كونكتيلي VPN هو تطبيق مخصص لتوفير اتصال إنترنت غير محدود بطريقة سهلة وسريعة للجميع.\n\nيمكنك الحصول على 7 أيام من الإنترنت غير المحدود مقابل 20 أوقية جديدة فقط."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ========== زر 2: المصداقية ========== -->
+        <LinearLayout
+            android:id="@+id/trustLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/trustButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="المصداقية"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A237E"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/trustContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:padding="16dp"
+                android:text="نحن نهتم بثقة المستخدمين، لذلك يمكنك استخدام الباقة أولًا قبل الدفع.\n\nإذا أعجبتك الخدمة واستفدت منها يمكنك الدفع بعد انتهاء الباقة، وإذا لم تناسبك الخدمة يمكنك التوقف عن الاستخدام.\n\nملاحظة:\nعند حصولك على باقة سيتم تسجيلها كدين مؤقت، ولن تتمكن من أخذ باقة جديدة حتى يتم تسديد الباقة السابقة."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ========== زر 3: الأمان ========== -->
+        <LinearLayout
+            android:id="@+id/securityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/securityButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="الأمان"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A237E"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/securityContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:padding="16dp"
+                android:text="عزيزي المستخدم(ة)،\nجميع بياناتك محفوظة ومشفرة بأمان لضمان حماية معلوماتك وخصوصيتك أثناء استخدام التطبيق."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- زر البدء -->
+        <Button
+            android:id="@+id/getStartedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="ابدأ"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+</ScrollView>
