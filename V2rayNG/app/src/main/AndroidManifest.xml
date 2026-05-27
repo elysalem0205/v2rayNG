@@ -51,7 +51,7 @@
         android:theme="@style/AppThemeDayNight.NoActionBar"
         android:usesCleartextTraffic="true">
 
-        <!-- ==================== نشاط الترحيب الجديد ==================== -->
+        <!-- ==================== نشاط الترحيب ==================== -->
         <activity
             android:name=".ui.OnboardingActivity"
             android:exported="true">
@@ -62,16 +62,19 @@
             </intent-filter>
         </activity>
 
-        <!-- ==================== الصفحة الرئيسية (لم تعد نقطة الدخول) ==================== -->
+        <!-- ==================== نشاط تسجيل الدخول والتسجيل ==================== -->
+        <activity
+            android:name=".ui.AuthActivity"
+            android:exported="false" />
+
+        <!-- ==================== الصفحة الرئيسية ==================== -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
             android:launchMode="singleTask">
-            <!-- تم حذف intent-filter من هنا -->
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
@@ -160,10 +163,8 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:scheme="v2rayng" />
                 <data android:host="install-config" />
                 <data android:host="install-sub" />
@@ -257,6 +258,7 @@
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="tile" />
         </service>
+
         <!-- =====================Tasker===================== -->
         <activity
             android:name=".ui.TaskerActivity"
@@ -282,12 +284,10 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
             tools:node="merge">
-
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"
                 tools:node="remove" />
-
         </provider>
 
         <service
