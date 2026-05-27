@@ -58,7 +58,6 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun startMainActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
+        startActivity(Intent(this, AuthActivity::class.java))
     }
 }
