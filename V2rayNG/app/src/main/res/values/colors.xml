@@ -9,6 +9,10 @@
     <color name="divider_color_light">#E0E0E0</color>
     <color name="colorIndicator">@color/md_theme_primary</color>
 
+    <!-- ========== ألوان واجهة تسجيل الدخول ========== -->
+    <color name="blue_dark">#1A237E</color>
+    <color name="blue_light">#9FA8DA</color>
+
     <!-- Primary colors - main tone: black -->
     <color name="md_theme_primary">#000000</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
